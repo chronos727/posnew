@@ -128,6 +128,7 @@
               <p>Isaah Hideout</p>
               <p>001 b Sitio Nazareth, Barangay San Isdro, Paranaque City</p>
               <p>Cashier: Karl Benjamin R  Bughaw</p>
+              <p>Date/Time: <p><span id="date-time"></span></p></p>
             <h5>Order No.</h5>
 
             <p><span id="order-number"></span></p>
@@ -176,6 +177,23 @@
     return Math.floor(Math.random() * 1000000); // Adjust as needed for your order number length
   }
 
+
+
+      function getCurrentDateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return now.toLocaleDateString('en-US', options);
+  }
+
+
+    // Update date and time
+    const dateTime = getCurrentDateTime();
+    document.getElementById('date-time').textContent = dateTime;
+      }
+
+
+      
+
   // Function to update the receipt modal with order number and barcode
   function updateReceipt(orderNumber) {
     // Update order number
@@ -192,6 +210,9 @@
 </script>
 
 
+    
+
+    
 
     
     <script src="js/script.js"></script>
