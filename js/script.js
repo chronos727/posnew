@@ -1,96 +1,33 @@
 // data array
 const data = [
-    [
-        'food',
-        'American Favourite', 
-         40000, 
-        'Pepperoni sapi, daging sapi cincang, jamur.', 
-        'american-favourite.jpg'
-    ],
-    [
-        'food',
-        'Meat Lover',
-         40000, 
-        'Irisan sosis sapi, daging sapi cincang, burger sapi, sosis ayam.',
-        'beef-lasagna.jpg'
-    ],
-    [
-        'food',
-        'Super Supreme',
-         49500, 
-        'Daging ayam dan sapi asap, daging sapi cincang, burger sapi, jamur, paprika merah dan paprika hijau.',
-        'supreme.jpg'
-    ],
-    [
-        'food',
-        'Tuna Melt',
-         49500, 
-        'Irisan daging ikan tuna, butiran jagung, saus mayonnaise.',
-        'supreme.jpg'
-    ],
-    [
-        'food',
-        'Beef Spaghetti', 
-         43000, 
-        'Pepperoni sapi, daging sapi cincang, jamur.', 
-        'beef-spaghetti.jpg'
-    ],
-    [
-        'food',
-        "Beef Lasagna",
-        48000,
-        "Dipanggang, daging sapi cincang. krim putih lembut di tiap lapisan.",
-        "beef-lasagna.jpg"
-    ],
-    [
-        'food',
-        "Beef Fettuccine",
-        43000,
-        "Daging sapi asap dan jamur, ditumis dengan saus krim lembut.",
-        "creamy-beef-fettuccine.jpg"
-    ],
-    [
-        'food',
-        "Chicken",
-        40000,
-        "Ayam dengan saus lada hitam.",
-        "black-pepper-chicken.jpg"
+    [   'food', 
+        "Chicharon Bulaklak", 
+     99,
+     "Crispy Pork Belly",
+     "chicharon.png"
     ],
     [
         'drink',
-        "Toffee Coffee",
-        20000,
-        "Coffee Taste",
-        "toffee-coffee.jpg"
+        "Tequila",
+        1500,
+        "Lovable Taste",
+        "Tequila.png"
     ],
     [
         'drink',
-        "Chocolate Milkshake",
-        18500,
-        "Chocolate Milkshake Taste",
-        "chocolate-milkshake.jpg"
+        "1 Bucket of Redhorse",
+        500,
+        "Lakas Tama Pero Di Wasak",
+        "1-Bucket-Redhorse.png"
     ],
     [
         'drink',
-        "Green Tea Shake",
-        25000,
-        "Green Tea Shake Taste",
-        "green-tea-shake.jpg"
+        "Jack Daniel's",
+        1500,
+        "Wasak na Wasak",
+        "Jack-Daniels.png"
     ],
-    [
-        'drink',
-        "Choco Mint",
-        22000,
-        "Choco Mint Taste",
-        "choco-mint.jpg"
-    ],
-    [
-        'drink',
-        "Strawberry Milkshake",
-        20000,
-        "Strawberry Milkshake Taste",
-        "strawberry-milkshake.jpg"
-    ]
+    
 ]
 
 // global variable
@@ -216,7 +153,7 @@ function show_invoice(){
     $.each(invoice_item, function(i, val){
         const el_media = `
             <div class="media mb-2">
-                <img src="assets/${val[0]}" class="align-self-center mr-3" width="95">
+                // <!-- <img src="assets/${val[0]}" class="align-self-center mr-3" width="95">  -->
                 <div class="media-body">
                 <h6 class="mt-0">${val[1]}</h6>
                 <p>Rp.<span>${val[2]}</span></p>
@@ -258,7 +195,7 @@ function counting (){
     sub_total = 0
     $.each(invoice_item, function(i, val){
         sub_total += val[2] * val[3]
-        tax = sub_total * 10/100
+        tax = sub_total * 0.2
         total = sub_total + tax
         $('#tax').text(tax)
         $('#total').text(total)
@@ -288,7 +225,7 @@ function buy(){
         alert("can't counting this value")
         return
     }
-    let confirm_invoice = confirm('hi! '+ 'user' +', Thanks For Buying :)\nWanna see the invoice ?')
+    let confirm_invoice = confirm('hi! '+ 'user' +', are you sure for the costumer\'s order?\nClick Yes to confirm')
     if(confirm_invoice == true){
         $('#tax-in').text(tax)
         $('#total-in').text(total)
@@ -299,7 +236,7 @@ function buy(){
         $('#money').attr('placeholder', 'Insert Your Money')
         $('#modal-invoice').modal('show')
     }else{
-        alert('thanks for visit :)')
+        alert('BE CAREFUL')
         remove_invoice()
     }
 }
