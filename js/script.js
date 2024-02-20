@@ -172,7 +172,7 @@ function show_invoice(){
                 <h6 class="mt-0">${val[1]}</h6>
                 <p>PHP <span>${val[2]}</span></p>
                 </div>
-                <p>Quantity </p>
+                <p><span>Quantity </span></p>
                 <input class="quantity mt-3" id="quantity" type="number" value="${Number(val[3])}">
                 <button class="btn delete mt-2"><img src="https://img.icons8.com/wired/35/000000/trash.png"></button>
             </div>
