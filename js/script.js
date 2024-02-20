@@ -22,7 +22,7 @@ const data = [
     ],
     [
         'drink',
-        "Jack Daniel's",
+        "Jack Daniel\'s",
         1500,
         "Wasak na Wasak",
         "Jack-Daniels.png"
