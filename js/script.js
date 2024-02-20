@@ -108,7 +108,7 @@ function food_cat(){
                     <img src="assets/${val[4]}" class="card-img-top" height="130">
                     <div class="card-body">
                         <h5 class="card-title">${val[1]}</h5>
-                        <p class="card-text">Rp.${val[2]}</p>
+                        <p class="card-text">PHP ${val[2]}</p>
                     </div>
                     </div>
                 </div>
