@@ -45,6 +45,10 @@ body{
     cursor: pointer;
 }
 
+#logo-img {
+    width: 10%; /* Adjust as needed */
+}
+
 #buy-type{
     color: black;
     border-radius: 0;
