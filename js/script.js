@@ -123,7 +123,7 @@ function drink_cat(){
                     <img src="assets/${val[4]}" class="card-img-top" height="200">
                     <div class="card-body">
                         <h5 class="card-title">${val[1]}</h5>
-                        <p class="card-text">Rp.${val[2]}</p>
+                        <p class="card-text">PHP ${val[2]}</p>
                     </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ function show_invoice(){
                 <img src="assets/${val[0]}" class="align-self-center mr-3" width="95">
                 <div class="media-body">
                     <h6 class="mt-0">${val[1]}</h6>
-                    <p>Rp.<span>${val[2]}</span></p>
+                    <p>PHP <span>${val[2]}</span></p>
                     <span>${val[3]}</span>
                 </div>
             </div>
@@ -195,7 +195,7 @@ function counting (){
     sub_total = 0
     $.each(invoice_item, function(i, val){
         sub_total += val[2] * val[3]
-        tax = sub_total * 0.2
+        tax = sub_total * 0.02
         total = sub_total + tax
         $('#tax').text(tax)
         $('#total').text(total)
