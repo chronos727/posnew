@@ -188,7 +188,7 @@ function show_invoice(){
                     <h6 class="mt-0">${val[1]}</h6>
                     <p>PHP <span">${val[2]}</span></p>
                     
-                    <h6>Quantity <span">${val[3]}</span> </h6>
+                    <h6>Quantity: <span">${val[3]}</span> </h6>
                 </div>
             </div>
         `
