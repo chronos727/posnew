@@ -3,6 +3,7 @@ const data = [
     [   'food', 
         "Chicharon Bulaklak", 
         99,
+        2,
         "Crispy Pork Belly",
         "chicharon.png"
     ],
