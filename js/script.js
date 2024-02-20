@@ -153,7 +153,7 @@ function show_invoice(){
     $.each(invoice_item, function(i, val){
         const el_media = `
             <div class="media mb-2">
-                // <!-- <img src="assets/${val[0]}" class="align-self-center mr-3" width="95">  -->
+                <img src="assets/${val[0]}" class="align-self-center mr-3" width="95"> 
                 <div class="media-body">
                 <h6 class="mt-0">${val[1]}</h6>
                 <p>Rp.<span>${val[2]}</span></p>
