@@ -2,9 +2,9 @@
 const data = [
     [   'food', 
         "Chicharon Bulaklak", 
-     99,
-     "Crispy Pork Belly",
-     "chicharon.png"
+        99,
+        "Crispy Pork Belly",
+        "chicharon.png"
     ],
     [
         'drink',
@@ -163,7 +163,7 @@ function show_invoice(){
                 <img src="assets/${val[0]}" class="align-self-center mr-3" width="95">
                 <div class="media-body">
                 <h6 class="mt-0">${val[1]}</h6>
-                <p>Rp.<span>${val[2]}</span></p>
+                <p>PHP <span>${val[2]}</span></p>
                 </div>
                 <input class="quantity mt-3" id="quantity" type="number" value="${Number(val[3])}">
                 <button class="btn delete mt-2"><img src="https://img.icons8.com/wired/35/000000/trash.png"></button>
