@@ -186,9 +186,9 @@ function show_invoice(){
                 
                  <div class="media-body">
                     <h6 class="mt-0">${val[1]}</h6>
-                    <p>PHP <span>${val[2]}</span></p>
-                    <p>Quantity </p>
-                    <span>${val[3]}</span>
+                    <p>PHP <span class="text-right">${val[2]}</span></p>
+                    <p><span>Quantity <span></p>
+                    <span class="text-right">${val[3]}</span>
                 </div>
             </div>
         `
