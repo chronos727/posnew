@@ -161,13 +161,10 @@ function invoice_data(img, name, price){
 function show_invoice(){
     $('#loop-invoice').html('')
     $('#total-item').html('')
+    let receiptContent = '';
     $.each(invoice_item, function(i, val){
-        const el_media = `
+        receiptContent += `
             <div class="media mb-2">
-
-
-
-                
                 <div class="media-body">
                 <h6 class="mt-0">${val[1]}</h6>
                 <p>PHP <span>${val[2]}</span></p>
@@ -209,6 +206,23 @@ $('#loop-invoice').on('change','.quantity',function(){
     counting()
     show_invoice()
 })
+// Update the receipt display
+    $('#receipt-display').html(receiptContent);
+counting();
+}
+
+// Modify the invoice_data function to update the receipt display after adding a product
+function invoice_data(img, name, price){
+    let invoice_data = [img, name, price, 0]
+    for(let i = 0; i < invoice_item.length; i++){
+        if(name == invoice_item[i][1]){
+            alert('has available')
+            return
+        }
+    }
+    invoice_item.push(invoice_data);
+    show_invoice(); // Update the receipt display
+}
 
 // counting
 function counting (){
