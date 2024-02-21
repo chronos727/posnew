@@ -251,6 +251,7 @@ function buy(){
         $('#tax-in').text(tax)
         $('#total-in').text(total)
         $('#total-type').text(type)
+        $('#total-type1').text(order)
         $('#money-in').text(money)
         $('#change-in').text(change)
         $('#money').val('')
