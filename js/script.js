@@ -234,6 +234,7 @@ $('#buy').on('click', buy)
 function buy(){
     let money = $('#money').val()
     let type = $('#buy-type').val()
+    let type1 = $('#order-type').val()
     let change = money - total
     if(money == ''){
         alert('Insert The Money')
