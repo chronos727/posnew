@@ -30,6 +30,10 @@ body{
     width: 100%;
 }
 
+.type-order{
+    width: 100%;
+}
+
 .item-list{
     position: relative;
     height: 57vh;
@@ -50,6 +54,15 @@ body{
 }
 
 #buy-type{
+    color: black;
+    border-radius: 0;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 38%;
+}
+
+#order-type{
     color: black;
     border-radius: 0;
     height: 50px;
