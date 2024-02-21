@@ -1,44 +1,51 @@
-body {
+body{
     margin: 0;
     padding: 0;
     background: #eaeaea;
     overflow: hidden;
 }
 
-.bg-nav {
+.bg-nav{
     background: blue;
 }
 
-.contain {
+.contain{
     padding: 0 10px;
 }
 
-.menu, .cart {
+.menu , .cart{
     height: 85vh;
-    overflow-y: scroll; /* Added overflow-y: scroll; to both */
 }
 
-.sub-nav {
+.menu{
+    overflow-y: scroll;
+}
+
+.sub-nav{
     padding: 10px;
     border: 0;
 }
 
-.type-buy, .type-order { /* Changed .type-order to match the class name in HTML */
+.type-buy{
     width: 100%;
 }
 
-.item-list {
+.type-order{
+    width: 100%;
+}
+
+.item-list{
     position: relative;
     height: 57vh;
     padding-right: 2%;
     overflow-y: scroll;
 }
 
-.quantity {
+.quantity{
     width: 15%;
 }
 
-.card {
+.card{
     cursor: pointer;
 }
 
@@ -46,7 +53,7 @@ body {
     width: 20%; /* ewan sana sakto */
 }
 
-#buy-type, #order-type { /* Combined to apply same styles */
+#buy-type{
     color: black;
     border-radius: 0;
     height: 50px;
@@ -55,7 +62,16 @@ body {
     padding-left: 38%;
 }
 
-.remove-all {
+#order-type{
+    color: black;
+    border-radius: 0;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 38%;
+}
+
+.remove-all{
     width: 100%;
     border-radius: 0;
-}
+    }
