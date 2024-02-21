@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stocks Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Stocks</title>
+    <!-- Add any additional styles or scripts here -->
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-4">Stocks Page</h1>
-        <div id="food-supplies">
-            <h2>Food Supplies</h2>
-            <div id="food-list"></div>
-        </div>
-        <div id="drink-supplies">
-            <h2>Drink Supplies</h2>
-            <div id="drink-list"></div>
-        </div>
-    </div>
+    <h1>Stock Levels</h1>
+    <table id="stock-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Stock Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Stock data will be dynamically added here -->
+        </tbody>
+    </table>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="stocks.js"></script>
+    <script src="stock-worker.js"></script>
+    <script>
+        // Fetch stock data and populate the table
+        async function displayStocks() {
+            try {
+                const stockData = await fetchStockData(); // Call your stock-worker.js function
+                const tableBody = document.querySelector('#stock-table tbody');
+
+                stockData.forEach((stock) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${stock.name}</td>
+                        <td>${stock.quantity}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching stock data:', error);
+            }
+        }
+
+        // Call the function to display stocks when the page loads
+        displayStocks();
+    </script>
 </body>
 </html>
