@@ -32,14 +32,14 @@ const data = [
         'drink',
         "Jack Daniels",
         1500,
-        "Wasak na Wasak",
+        "takas na",
         "Jack-Daniels.png"
     ],
     [
         'drink',
         "Juice",
         100,
-        "asda",
+        "weak",
         "juice.jpg"
     ],
     [
@@ -53,21 +53,21 @@ const data = [
         'drink',
         "Water",
         50,
-        "asda",
+        "mabait",
         "water.jpg"
     ],
     [
         'food', 
         "Chicharon", 
         100,
-        "Crispy Pork Belly",
+        "tanpulu",
         "chicha.jpg"
     ],
     [
         'food', 
         "Chicharon Bulaklak", 
         100,
-        "Crispy Pork Belly",
+        "Crispy Pork",
         "chicharon.jpg"
     ],
     [
@@ -81,14 +81,14 @@ const data = [
         'food',
         "Sisig",
         135,
-        "malaki",
+        "solid sarap",
         "sisig.jpg"
     ],
     [
         'food',
         "Sizzling Hotdog",
         200,
-        "malaki",
+        "juts pero madami",
         "hotdog.jpg"
     ]
 ];
