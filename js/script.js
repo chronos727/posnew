@@ -9,17 +9,17 @@ const data = [
     ],
     [
         'drink',
-        "Blowjob Tower",
-        1500,
-        "Walang Kasing Sarap",
-        "Blowjob-Tower.png"
-    ],
-    [
-        'drink',
         "Black Label",
         2000,
         "Wasak na Wasak",
         "blacklabel.png"
+    ],
+    [
+        'drink',
+        "Blowjob Tower",
+        1500,
+        "Walang Kasing Sarap",
+        "Blowjob-Tower.png"
     ],
     [
         'drink',
@@ -37,10 +37,31 @@ const data = [
     ],
     [
         'drink',
+        "Juice",
+        100,
+        "asda",
+        "juice.jpg"
+    ],
+    [
+        'drink',
         "Tequila",
         1500,
         "Lovable Taste",
         "Tequila.png"
+    ],
+    [
+        'drink',
+        "Water",
+        50,
+        "asda",
+        "water.jpg"
+    ],
+    [
+        'food', 
+        "Chicharon", 
+        100,
+        "Crispy Pork Belly",
+        "chicha.jpg"
     ],
     [
         'food', 
@@ -55,6 +76,13 @@ const data = [
         200,
         "Sobrang Sarap",
         "crispypata.png"
+    ],
+    [
+        'food',
+        "Sisig",
+        135,
+        "malaki",
+        "sisg.jpg"
     ],
     [
         'food',
