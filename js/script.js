@@ -47,7 +47,7 @@ const data = [
         "Chicharon Bulaklak", 
         100,
         "Crispy Pork Belly",
-        "chicharon.png"
+        "chicharon.jpg"
     ],
     [
         'food',
@@ -55,6 +55,13 @@ const data = [
         200,
         "Sobrang Sarap",
         "crispypata.png"
+    ],
+    [
+        'food',
+        "Sisling Hotdog",
+        200,
+        "malaki",
+        "hotdog.png"
     ]
 ];
 
