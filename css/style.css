@@ -1,9 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background: #eaeaea;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Add linear gradient background */
     overflow: hidden;
 }
+
 
 .bg-nav{
     background: blue;
