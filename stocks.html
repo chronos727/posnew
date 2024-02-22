@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stocks Listing</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Add your custom CSS styles here -->
+    <title>Product Listing</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-nav">
-        <a class="navbar-brand text-white" href="#">Isaah Hangout</a>
-        <button class="btn btn-sm btn-primary ml-auto">Home</button>
-        <button class="btn btn-sm btn-primary ml-2">Stocks</button>
-        <!-- Add other navigation buttons if needed -->
-    </nav>
+    <h1>Product Listing</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Replace the data below with your actual product data -->
+            <tr>
+                <td>Drink</td>
+                <td>1 Bucket of Redhorse</td>
+                <td>500</td>
+                <td>Lakas Tama Pero Di Wasak</td>
+                <td><img src="1-Bucket-Redhorse.png" alt="Redhorse"></td>
+                <td><span id="stock1"></span></td>
+            </tr>
+            <!-- Add other product rows similarly -->
+        </tbody>
+    </table>
 
-    <div class="container mt-4">
-        <h1 class="text-center">Stocks Listing</h1>
-        <div class="row">
-           <div class="col-md-3 p-3 cart">
-    <!-- Your stock items go here -->
-    <!-- Example: -->
-    <div class="stock-item">
-        <h4>1 Bucket of Redhorse</h4>
-        <p>Lakas Tama Pero Di Wasak</p>
-        <img src="assets/1-Bucket-Redhorse.png" alt="Redhorse" style="width: 5%;">
-        <p class="stock-count">93 in stock</p>
-    </div>
-    <!-- Add more stock items similarly -->
-</div>
-            <div class="col-md-9 p-3 menu">
-                <!-- Other content related to stocks -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Add any other necessary elements (e.g., modals, buttons) -->
+    <!-- Home button -->
+    <button type="button" onclick="goToHome()">Home</button>
 
     <script>
-        // You can add JavaScript functionality here if needed
+        // Generate random stock levels between 91 and 100
+        const stockElements = document.querySelectorAll('[id^="stock"]');
+        stockElements.forEach((element) => {
+            const randomStock = Math.floor(Math.random() * 10) + 91;
+            element.textContent = randomStock;
+        });
+
+        // Function to navigate back to home.html
+        function goToHome() {
+            window.location.href = 'home.html';
+        }
     </script>
 </body>
 </html>
