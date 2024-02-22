@@ -49,6 +49,10 @@ body{
     width: 20%; /* ewan sana sakto */
 }
 
+#stocks-img {
+    width: 5%; /* ewan ko din sana sakto */
+}
+
 #buy-type{
     color: black;
     border-radius: 0;
