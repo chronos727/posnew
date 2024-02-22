@@ -29,8 +29,8 @@
 
     <nav class="navbar navbar-light bg-nav">
   <a class="navbar-brand text-white" href="#">Isaah Hangout</a>
-  <button class="btn btn-sm btn-primary ml-auto">Home</button>
-  <button class="btn btn-sm btn-primary ml-2">Stocks</button>
+  <button class="btn btn-sm btn-primary ml-auto" onclick="goToHome()">Home</button>
+  <button class="btn btn-sm btn-primary ml-2" onclick="goToStocks()">Stocks</button>
   <div class="col-md-2" id="search-el" style="display: none;">
     <input type="text" class="form-control" id="search-input" placeholder="search something..">
   </div>
@@ -201,6 +201,31 @@
     return Math.floor(Math.random() * 1000000); // Adjust as needed for your order number length
   }
 
+
+
+
+
+
+
+
+
+      function goToHome() {
+            window.location.href = 'home.html';
+        }
+      function goToStocks() {
+            window.location.href = 'stocks.html';
+        }
+
+
+
+
+
+
+
+
+
+
+      
 
 
       function getCurrentDateTime() {
