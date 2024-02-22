@@ -29,11 +29,32 @@ const data = [
     ],
     [
         'drink',
+        "Emperador",
+        1200,
+        "nalasing",
+        "emperador.png"
+    ],
+    [
+        'drink',
         "Blowjob Tower",
         1500,
         "Walang Kasing Sarap",
         "Blowjob-Tower.png"
     ],
+    [
+        'food',
+        "Lechon Kawali with Cheese",
+        200,
+        "Sobrang Sarap",
+        "crispypata.png"
+    ],
+    [
+        'food',
+        "Black Label",
+        200,
+        "wasak na wasak",
+        "blacklabel.png"
+    ]
     
 ]
 
