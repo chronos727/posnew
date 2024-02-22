@@ -6,6 +6,8 @@
     <title>Product Listing</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/style.css">
+        
     <!-- Your custom CSS -->
     <style>
         /* Add your custom CSS styles here */
@@ -16,6 +18,9 @@
         <a class="navbar-brand text-white" href="#">Isaah Hangout</a>
         <button class="btn btn-sm btn-primary ml-auto" onclick="goToHome()">Home</button>
         <button class="btn btn-sm btn-primary ml-2">Stocks</button>
+         <div class="col-md-2" id="search-el" style="display: none;">
+    <input type="text" class="form-control" id="search-input" placeholder="search something..">
+  </div>
     </nav>
 
     <div class="container mt-3">
@@ -38,7 +43,7 @@
                     <td>1 Bucket of Redhorse</td>
                     <td>500</td>
                     <td>Lakas Tama Pero Di Wasak</td>
-                    <td><img src="1-Bucket-Redhorse.png" alt="Redhorse"></td>
+                    <td><img src="assets/1-Bucket-Redhorse.png" alt="Redhorse"></td>
                     <td><span id="stock1"></span></td>
                 </tr>
                 <!-- Add other product rows similarly -->
@@ -55,7 +60,7 @@
         // Generate random stock levels between 91 and 100
         const stockElements = document.querySelectorAll('[id^="stock"]');
         stockElements.forEach((element) => {
-            const randomStock = Math.floor(Math.random() * 10) + 91;
+            const randomStock = Math.floor(Math.random() * 26) + 74;
             element.textContent = randomStock;
         });
 
