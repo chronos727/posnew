@@ -69,3 +69,46 @@ body{
     width: 100%;
     border-radius: 0;
 }
+
+.btn {
+    border-radius: 0; /* Remove button border-radius */
+}
+
+/* Add custom styles for dropdown */
+.dropdown-menu {
+    border-radius: 0;
+    background-color: blue; /* Change dropdown background color */
+}
+
+.dropdown-item {
+    color: white; /* Change dropdown item text color */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .menu, .cart {
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .sub-nav {
+        text-align: center; /* Center align sub-nav items */
+    }
+}
+
+/* Color scheme adjustments */
+.bg-nav {
+    background: blue; /* Adjust navbar background color */
+}
+
+/* Typography adjustments */
+h5, h6 {
+    font-family: 'Arial', sans-serif; /* Change font family for headings */
+}
+
+/* Animation example */
+.btn {
+    transition: all 0.3s ease; /* Add transition for button hover effect */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Move button slightly up on hover */
+}
