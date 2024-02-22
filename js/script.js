@@ -1,24 +1,32 @@
 // data array
 const data = [
-    [   'food', 
-        "Chicharon Bulaklak", 
-        99,
-        "Crispy Pork Belly",
-        "chicharon.png"
-    ],
-    [
-        'drink',
-        "Tequila",
-        1500,
-        "Lovable Taste",
-        "Tequila.png"
-    ],
     [
         'drink',
         "1 Bucket of Redhorse",
         500,
         "Lakas Tama Pero Di Wasak",
         "1-Bucket-Redhorse.png"
+    ],
+    [
+        'drink',
+        "Blowjob Tower",
+        1500,
+        "Walang Kasing Sarap",
+        "Blowjob-Tower.png"
+    ],
+    [
+        'drink',
+        "Black Label",
+        2000,
+        "Wasak na Wasak",
+        "blacklabel.png"
+    ],
+    [
+        'drink',
+        "Emperador",
+        1200,
+        "Nalasing",
+        "emperador.png"
     ],
     [
         'drink',
@@ -29,17 +37,17 @@ const data = [
     ],
     [
         'drink',
-        "Emperador",
-        1200,
-        "nalasing",
-        "emperador.png"
+        "Tequila",
+        1500,
+        "Lovable Taste",
+        "Tequila.png"
     ],
     [
-        'drink',
-        "Blowjob Tower",
-        1500,
-        "Walang Kasing Sarap",
-        "Blowjob-Tower.png"
+        'food', 
+        "Chicharon Bulaklak", 
+        100,
+        "Crispy Pork Belly",
+        "chicharon.png"
     ],
     [
         'food',
@@ -47,16 +55,9 @@ const data = [
         200,
         "Sobrang Sarap",
         "crispypata.png"
-    ],
-    [
-        'food',
-        "Black Label",
-        200,
-        "wasak na wasak",
-        "blacklabel.png"
     ]
-    
-]
+];
+
 
 // global variable
 let invoice_item = []
