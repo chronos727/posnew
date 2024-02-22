@@ -82,7 +82,7 @@ const data = [
         "Sisig",
         135,
         "malaki",
-        "sisg.jpg"
+        "sisig.jpg"
     ],
     [
         'food',
