@@ -58,10 +58,10 @@ const data = [
     ],
     [
         'food',
-        "Sisling Hotdog",
+        "Sizzling Hotdog",
         200,
         "malaki",
-        "hotdog.png"
+        "hotdog.jpg"
     ]
 ];
 
