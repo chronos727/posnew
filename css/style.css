@@ -116,6 +116,6 @@ body {
     }
 
     #logo-img {
-        width: 5px; /* Adjusted logo width */
+        width: 50px !important; /* Adjusted logo width */
     }
 }
