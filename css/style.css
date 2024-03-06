@@ -115,8 +115,9 @@ body {
         height: auto;
     }
 
-    .logo {
+    #logo-img {
     width: 10%; /* Adjust the size as needed */
 }
+
 
 }
