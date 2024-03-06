@@ -1,67 +1,63 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(200,200,200,1)); /* Adjust gradient direction */
+    background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(200,200,200,1));
     overflow: hidden;
-    height: 100vh; /* Ensure the background covers the entire viewport */
+    height: 100vh;
 }
 
-
-
-
-
-.bg-nav{
+.bg-nav {
     background: blue;
 }
 
-.contain{
+.contain {
     padding: 0 10px;
+    overflow-y: auto; /* Make the container scrollable */
 }
 
-.menu , .cart{
-    height: 85vh;
+.menu, .cart {
+    height: calc(85vh - 50px); /* Adjust height and consider the height of the navbar */
 }
 
-.menu{
+.menu {
     overflow-y: scroll;
 }
 
-.sub-nav{
+.sub-nav {
     padding: 10px;
     border: 0;
 }
 
-.type-buy{
+.type-buy {
     width: 100%;
 }
 
-.item-list{
+.item-list {
     position: relative;
-    height: 57vh;
+    height: calc(57vh - 50px); /* Adjust height and consider the height of the navbar */
     padding-right: 2%;
     overflow-y: scroll;
 }
 
-.quantity{
+.quantity {
     width: 15%;
 }
 
-.card{
+.card {
     cursor: pointer;
 }
 
 #logo-img {
-    width: 20%; /* ewan sana sakto */
+    width: 20%;
 }
 
 #stocks-img {
     width: 5%;
     display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-} /* ewan ko din sana sakto */
+    margin: 0 auto;
 }
 
-#buy-type{
+#buy-type {
     color: black;
     border-radius: 0;
     height: 50px;
@@ -70,50 +66,45 @@ body {
     padding-left: 38%;
 }
 
-.remove-all{
+#money {
+    width: 100%; /* Make the input field wider */
+}
+
+.remove-all {
     width: 100%;
     border-radius: 0;
 }
 
 .btn {
-    border-radius: 0; /* Remove button border-radius */
+    border-radius: 0;
 }
 
-/* Add custom styles for dropdown */
 .dropdown-menu {
     border-radius: 0;
-    background-color: blue; /* Change dropdown background color */
+    background-color: blue;
 }
 
 .dropdown-item {
-    color: white; /* Change dropdown item text color */
+    color: white;
 }
 
-/* Responsive design adjustments */
 @media (max-width: 768px) {
     .menu, .cart {
-        height: auto; /* Adjust height for smaller screens */
+        height: auto;
     }
     .sub-nav {
-        text-align: center; /* Center align sub-nav items */
+        text-align: center;
     }
 }
 
-/* Color scheme adjustments */
-.bg-nav {
-    background: blue; /* Adjust navbar background color */
-}
-
-/* Typography adjustments */
 h5, h6 {
-    font-family: 'Arial', sans-serif; /* Change font family for headings */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Animation example */
 .btn {
-    transition: all 0.3s ease; /* Add transition for button hover effect */
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-2px); /* Move button slightly up on hover */
-        }
+    transform: translateY(-2px);
+}
