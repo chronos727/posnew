@@ -3,61 +3,65 @@ body {
     padding: 0;
     background: linear-gradient(to top, rgba(255,255,255,0.9), rgb(101, 116, 212));
     overflow: hidden;
-    height: 100vh;
+    height: 100vh; /* Ensure the background covers the entire viewport */
 }
 
-.bg-nav {
+
+
+
+
+.bg-nav{
     background: blue;
 }
 
-.contain {
+.contain{
     padding: 0 10px;
-    overflow-y: auto; /* Make the container scrollable */
 }
 
-.menu, .cart {
-    height: calc(85vh - 50px); /* Adjust height and consider the height of the navbar */
+.menu , .cart{
+    height: 85vh;
 }
 
-.menu {
+.menu{
     overflow-y: scroll;
 }
 
-.sub-nav {
+.sub-nav{
     padding: 10px;
     border: 0;
 }
 
-.type-buy {
+.type-buy{
     width: 100%;
 }
 
-.item-list {
+.item-list{
     position: relative;
-    height: calc(57vh - 50px); /* Adjust height and consider the height of the navbar */
+    height: 57vh;
     padding-right: 2%;
     overflow-y: scroll;
 }
 
-.quantity {
+.quantity{
     width: 15%;
 }
 
-.card {
+.card{
     cursor: pointer;
 }
 
 #logo-img {
-    width: 20%;
+    width: 20%; /* ewan sana sakto */
 }
 
 #stocks-img {
     width: 5%;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the image horizontally */
+} /* ewan ko din sana sakto */
 }
 
-#buy-type {
+#buy-type{
     color: black;
     border-radius: 0;
     height: 50px;
@@ -66,45 +70,50 @@ body {
     padding-left: 38%;
 }
 
-#money {
-    width: 100%; /* Make the input field wider */
-}
-
-.remove-all {
+.remove-all{
     width: 100%;
     border-radius: 0;
 }
 
 .btn {
-    border-radius: 0;
+    border-radius: 0; /* Remove button border-radius */
 }
 
+/* Add custom styles for dropdown */
 .dropdown-menu {
     border-radius: 0;
-    background-color: blue;
+    background-color: blue; /* Change dropdown background color */
 }
 
 .dropdown-item {
-    color: white;
+    color: white; /* Change dropdown item text color */
 }
 
+/* Responsive design adjustments */
 @media (max-width: 768px) {
     .menu, .cart {
-        height: auto;
+        height: auto; /* Adjust height for smaller screens */
     }
     .sub-nav {
-        text-align: center;
+        text-align: center; /* Center align sub-nav items */
     }
 }
 
-h5, h6 {
-    font-family: 'Arial', sans-serif;
+/* Color scheme adjustments */
+.bg-nav {
+    background: blue; /* Adjust navbar background color */
 }
 
+/* Typography adjustments */
+h5, h6 {
+    font-family: 'Arial', sans-serif; /* Change font family for headings */
+}
+
+/* Animation example */
 .btn {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Add transition for button hover effect */
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Move button slightly up on hover */
 }
