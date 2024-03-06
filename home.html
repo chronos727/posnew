@@ -167,7 +167,8 @@
             <p class="text-center">If there was an issue you can contact our support on Facebook</p>
             <h6 class="text-center">Thank You! </h6>
             <h6 class="text-center">please come again.</h6> 
-            
+            <button type="button" class="btn btn-secondary" id="print-receipt">Print Receipt</button>
+
             
           </div>
           <div class="modal-footer">
@@ -219,6 +220,37 @@
 
 
 
+
+
+
+
+
+      // Function to print the receipt as PDF
+function printReceipt() {
+    const doc = new jsPDF();
+    const element = document.getElementById('modal-invoice');
+    
+    // Use html2canvas to capture the modal content as an image
+    html2canvas(element).then((canvas) => {
+        const imageData = canvas.toDataURL('image/png');
+        // Add the captured image to the PDF
+        doc.addImage(imageData, 'PNG', 0, 0, 210, 297); // A4 size: 210 x 297 mm
+        // Save the PDF
+        doc.save('receipt.pdf');
+    });
+}
+
+// Call this function when the "Print" button is clicked
+$('#print-receipt').on('click', printReceipt);
+
+
+
+
+
+
+
+
+      
 
 
 
