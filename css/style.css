@@ -1,119 +1,110 @@
-body {
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(200,200,200,1)); /* Adjust gradient direction */
+}
+
+/* Set background color and font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(200,200,200,1));
     overflow: hidden;
-    height: 100vh; /* Ensure the background covers the entire viewport */
+    height: 100vh;
 }
 
-
-
-
-
-.bg-nav{
+/* Navbar styles */
+.navbar {
     background: blue;
-}
-
-.contain{
-    padding: 0 10px;
-}
-
-.menu , .cart{
-    height: 85vh;
-}
-
-.menu{
-    overflow-y: scroll;
-}
-
-.sub-nav{
     padding: 10px;
-    border: 0;
+    color: white;
 }
 
-.type-buy{
-    width: 100%;
+.navbar-brand {
+    font-size: 1.5rem;
 }
 
-.item-list{
-    position: relative;
-    height: 57vh;
-    padding-right: 2%;
-    overflow-y: scroll;
-}
-
-.quantity{
-    width: 15%;
-}
-
-.card{
-    cursor: pointer;
-}
-
-#logo-img {
-    width: 20%; /* ewan sana sakto */
-}
-
-#stocks-img {
-    width: 5%;
-    display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-} /* ewan ko din sana sakto */
-}
-
-#buy-type{
-    color: black;
-    border-radius: 0;
-    height: 50px;
-    text-align: center;
-    box-sizing: border-box;
-    padding-left: 38%;
-}
-
-.remove-all{
-    width: 100%;
-    border-radius: 0;
-}
-
+/* Button styles */
 .btn {
-    border-radius: 0; /* Remove button border-radius */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
 
-/* Add custom styles for dropdown */
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-outline-danger {
+    color: #d9534f;
+    border: 1px solid #d9534f;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Form styles */
+.form-control {
+    border-radius: 5px;
+}
+
+/* Dropdown styles */
 .dropdown-menu {
-    border-radius: 0;
-    background-color: blue; /* Change dropdown background color */
+    border-radius: 5px;
+    background-color: blue;
 }
 
 .dropdown-item {
-    color: white; /* Change dropdown item text color */
+    color: white;
 }
 
-/* Responsive design adjustments */
+/* Footer styles */
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .menu, .cart {
-        height: auto; /* Adjust height for smaller screens */
+    .navbar-brand {
+        font-size: 1.2rem;
     }
-    .sub-nav {
-        text-align: center; /* Center align sub-nav items */
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
     }
-}
-
-/* Color scheme adjustments */
-.bg-nav {
-    background: blue; /* Adjust navbar background color */
-}
-
-/* Typography adjustments */
-h5, h6 {
-    font-family: 'Arial', sans-serif; /* Change font family for headings */
-}
-
-/* Animation example */
-.btn {
-    transition: all 0.3s ease; /* Add transition for button hover effect */
-}
-
-.btn:hover {
-    transform: translateY(-2px); /* Move button slightly up on hover */
 }
