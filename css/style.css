@@ -114,4 +114,8 @@ body {
         width: 80%;
         height: auto;
     }
+
+    #logo-img {
+        width: 50px; /* Adjusted logo width */
+    }
 }
