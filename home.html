@@ -235,7 +235,7 @@ function printReceipt() {
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
 
-        const newHeight = 1 * 297; 
+        const newHeight = 1.5 * 297; 
         doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight);
 
         doc.save('receipt.pdf');
