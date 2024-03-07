@@ -1,4 +1,4 @@
-// data array
+
 const data = [
     [
         'drink',
