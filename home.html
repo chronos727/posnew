@@ -253,8 +253,12 @@ function printReceipt() {
 
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
- 
-        doc.addImage(imageData, 'PNG', 0, 0, 0, 0);
+
+
+      const newHeight = 0;
+
+      
+        doc.addImage(imageData, 'PNG', 0, 0, 0, newHeight);
 
         doc.save('receipt.pdf');
     });
