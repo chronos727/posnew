@@ -116,17 +116,7 @@
       </div>
     </div>
 
-<center>
-<div class="full-receipt" id="fullReceipt">
-  </br>
-    </br>
-    </br>
-  </br>
-    </br>
-    </br>
-  </br>
-    </br>
-    </br>
+
 
     <!-- Modal -->
     <div class="modal fade" id="modal-invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -194,8 +184,8 @@
 
 
   
-  </div>
-</center>
+
+
 
 
   
@@ -254,10 +244,10 @@ function printReceipt() {
         const imageData = canvas.toDataURL('image/png');
 
         // Calculate the new height to fit the entire page (A4 size)
-        const newHeight = 297; // Assuming A4 height in millimeters
+        const newHeight = 277; // Assuming A4 height in millimeters
 
         // Add the image to the PDF with the adjusted height
-        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight); // 210 is the A4 width in millimeters
+        doc.addImage(imageData, 'PNG', 0, 0, 230, newHeight); // 210 is the A4 width in millimeters
 
         // Save the PDF
         doc.save('receipt.pdf');
