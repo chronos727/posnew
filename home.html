@@ -117,7 +117,7 @@
     </div>
 
 
-<div class ="full-receipt">
+<div class="full-receipt" id="fullReceipt">
   </br>
     </br>
     </br>
@@ -248,7 +248,7 @@
 
 function printReceipt() {
     const doc = new jsPDF();
-    const element = document.getElementById('full-receipt');
+    const element = document.getElementById('fullReceipt');
 
 
     html2canvas(element).then((canvas) => {
