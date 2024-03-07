@@ -116,6 +116,18 @@
       </div>
     </div>
 
+
+<div class ="full-receipt">
+  </br>
+    </br>
+    </br>
+  </br>
+    </br>
+    </br>
+  </br>
+    </br>
+    </br>
+
     <!-- Modal -->
     <div class="modal fade" id="modal-invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -180,6 +192,13 @@
       </div>
     </div>
 
+
+  
+  </div>
+
+
+
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -229,21 +248,19 @@
 
 function printReceipt() {
     const doc = new jsPDF();
-    const element = document.getElementById('modal-invoice');
+    const element = document.getElementById('full-receipt');
+
 
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
+ 
+        doc.addImage(imageData, 'PNG', 0, 0, 0, 0);
 
-
-        const newHeight = 0; 
-
-        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight);
         doc.save('receipt.pdf');
     });
 }
 
 $('#print-receipt').on('click', printReceipt);
-
 
 
 
