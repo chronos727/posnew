@@ -231,17 +231,19 @@ function printReceipt() {
     const doc = new jsPDF();
     const element = document.getElementById('modal-invoice');
 
+
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
 
-        doc.addImage(imageData, 'PNG', 0, 0, 210, 297); 
+        const newHeight = 4 * 297; 
+        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight);
 
         doc.save('receipt.pdf');
     });
 }
-     
 
 $('#print-receipt').on('click', printReceipt);
+
 
 
 
