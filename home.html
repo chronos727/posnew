@@ -269,6 +269,7 @@ $('#print-receipt').on('click', printReceipt);
     function printReceipt() {
     const element = document.getElementById('modal-invoice');
 
+    // Capture the entire modal content as an image
     html2canvas(element).then((canvas) => {
         // Convert canvas data to a PNG image
         const imageData = canvas.toDataURL('image/png');
@@ -288,7 +289,9 @@ $('#print-receipt').on('click', printReceipt);
     });
 }
 
+// Attach the printReceipt function to the button click event
 $('#print-receipt').on('click', printReceipt);
+
 
 
 
