@@ -277,7 +277,17 @@ $('#print-receipt').on('click', printReceipt);
     function printReceipt() {
     const element = document.getElementById('modal-invoice');
 
-    html2canvas(element).then((canvas) => {
+    // Set canvas dimensions to match the content size
+    const canvas = document.createElement('canvas');
+    canvas.width = element.scrollWidth;
+    canvas.height = element.scrollHeight;
+
+    const context = canvas.getContext('2d');
+
+    // Capture the content as an image
+    html2canvas(element).then((renderedCanvas) => {
+        context.drawImage(renderedCanvas, 0, 0);
+
         // Convert canvas data to a PNG image
         const imageData = canvas.toDataURL('image/png');
 
@@ -297,6 +307,7 @@ $('#print-receipt').on('click', printReceipt);
 }
 
 $('#print-receipt').on('click', printReceipt);
+
 
 
 
