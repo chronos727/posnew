@@ -250,16 +250,16 @@ function printReceipt() {
     const doc = new jsPDF();
     const element = document.getElementById('modal-invoice');
 
-
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
 
+        // Calculate the new height to fit the entire page (A4 size)
+        const newHeight = 297; // Assuming A4 height in millimeters
 
-      const newHeight = 0.4 * 297;
+        // Add the image to the PDF with the adjusted height
+        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight); // 210 is the A4 width in millimeters
 
-      
-        doc.addImage(imageData, 'PNG', 0, 0, 0, newHeight);
-
+        // Save the PDF
         doc.save('receipt.pdf');
     });
 }
