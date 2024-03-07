@@ -243,18 +243,20 @@ function printReceipt() {
     html2canvas(element).then((canvas) => {
         const imageData = canvas.toDataURL('image/png');
 
-        // Calculate the new height to fit the entire page (A4 size)
-        const newHeight = 277; // Assuming A4 height in millimeters
+        const newHeight = 297; // Assuming A4 paper height in mm
 
-        // Add the image to the PDF with the adjusted height
-        doc.addImage(imageData, 'PNG', 0, 0, 230, newHeight); // 210 is the A4 width in millimeters
+        // Calculate the vertical center position
+        const verticalCenter = (297 - newHeight) / 2;
 
-        // Save the PDF
+        // Add the image with adjusted y position
+        doc.addImage(imageData, 'PNG', 0, verticalCenter, 230, newHeight);
+
         doc.save('receipt.pdf');
     });
 }
 
 $('#print-receipt').on('click', printReceipt);
+
 
 
 
