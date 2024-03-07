@@ -274,39 +274,52 @@ $('#print-receipt').on('click', printReceipt);
 
 
 
-    function printReceipt() {
+    function printFullReceipt() {
     const element = document.getElementById('modal-invoice');
 
-    // Set canvas dimensions to match the content size
+    // Calculate the total height of the content
+    const totalHeight = element.scrollHeight;
+
+    // Create a canvas with dimensions to fit the entire content
     const canvas = document.createElement('canvas');
     canvas.width = element.scrollWidth;
-    canvas.height = element.scrollHeight;
+    canvas.height = totalHeight;
 
     const context = canvas.getContext('2d');
 
-    // Capture the content as an image
-    html2canvas(element).then((renderedCanvas) => {
-        context.drawImage(renderedCanvas, 0, 0);
+    // Function to capture the entire content
+    function captureContent(scrollY) {
+        window.scrollTo(0, scrollY);
+        html2canvas(element).then((renderedCanvas) => {
+            context.drawImage(renderedCanvas, 0, scrollY);
 
-        // Convert canvas data to a PNG image
-        const imageData = canvas.toDataURL('image/png');
+            // Check if there's more content to capture
+            if (scrollY + window.innerHeight < totalHeight) {
+                captureContent(scrollY + window.innerHeight);
+            } else {
+                // All content captured, save as PNG
+                const imageData = canvas.toDataURL('image/png');
+                const img = new Image();
+                img.src = imageData;
 
-        // Create a new image element
-        const img = new Image();
-        img.src = imageData;
+                // Append the image to the document (optional)
+                document.body.appendChild(img);
 
-        // Append the image to the document (optional)
-        document.body.appendChild(img);
+                // Save the image as a file (customize the filename)
+                const link = document.createElement('a');
+                link.href = imageData;
+                link.download = 'full_receipt.png';
+                link.click();
+            }
+        });
+    }
 
-        // Save the image as a file (customize the filename)
-        const link = document.createElement('a');
-        link.href = imageData;
-        link.download = 'receipt.png';
-        link.click();
-    });
+    // Start capturing from the top
+    captureContent(0);
 }
 
-$('#print-receipt').on('click', printReceipt);
+$('#print-full-receipt').on('click', printFullReceipt);
+
 
 
 
