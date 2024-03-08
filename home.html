@@ -241,6 +241,7 @@
 
 
 //pdf
+      /*
     function printReceipt() {
     const doc = new jsPDF();
     const element = document.getElementById('modal-invoice');
@@ -250,22 +251,19 @@
 
         const newHeight = 297; 
 
-      const widthSize = 288;
 
-        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight, widthSize); 
-
-
+        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight); 
         doc.save('receipt.pdf');
     });
 }
 
 $('#print-receipt').on('click', printReceipt);
-
+*/
 
             
 
 
-/*
+
 
     function printReceipt() {
     const element = document.getElementById('modal-invoice');
@@ -299,7 +297,7 @@ $('#print-receipt').on('click', printReceipt);
 $('#print-receipt').on('click', printReceipt);
 
 
-*/
+
 
 
 
