@@ -185,9 +185,203 @@
     </div>
 
 
-  
+  </br>
+  </br>
+  </br>
+</br>
+  </br>
+  </br>
+</br>
+  </br>
+  </br>
+</br>
+  </br>
+  </br>
+<div class="container mt-3">
+        <h1>Product Listing</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Replace the data below with your actual product data -->
+                <!-- Loop through each product and add a row for each -->
+                <tr>
+                    <td>Drink</td>
+                    <td>1 Bucket of Redhorse</td>
+                    <td>500</td>
+                    <td>Lakas Tama Pero Di Wasak</td>
+                    <td><span id="stock1"></span></td>
+                </tr>
+                <!-- Add other product rows similarly -->
+                <tr>
+                    <td>Drink</td>
+                    <td>Black Label</td>
+                    <td>2000</td>
+                    <td>Wasak na Wasak</td>
+                    <td><span id="stock2"></span></td>
+                </tr>
+                <!-- Repeat this block for each product -->
+                <!-- Ensure to replace '1', '2', etc. in id="stockX" with corresponding numbers -->
+                <!-- E.g., id="stock3" for the third product, id="stock4" for the fourth, and so on -->
+                <!-- Use the same pattern for the other fields -->
+                <tr>
+                    <td>Drink</td>
+                    <td>Blowjob Tower</td>
+                    <td>1500</td>
+                    <td>Walang Kasing Sarap</td>
+                    <td><span id="stock3"></span></td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Emperador</td>
+                    <td>1200</td>
+                    <td>Nalasing</td>
+                    <td><span id="stock4"></span></td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Jack Daniels</td>
+                    <td>1500</td>
+                    <td>takas na</td>
+                    <td><span id="stock5"></span></td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Juice</td>
+                    <td>100</td>
+                    <td>weak</td>
+                    <td><span id="stock6"></span></td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Tequila</td>
+                    <td>1500</td>
+                    <td>Lovable Taste</td>
+                    <td><span id="stock7"></span></td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Water</td>
+                    <td>50</td>
+                    <td>mabait</td>
+                    <td><span id="stock8"></span></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>Chicharon</td>
+                    <td>100</td>
+                    <td>tanpulu</td>
+                    <td><span id="stock9"></span></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>Chicharon Bulaklak</td>
+                    <td>100</td>
+                    <td>Crispy Pork</td>
+                    <td><span id="stock10"></span></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>Lechon Kawali with Cheese</td>
+                    <td>200</td>
+                    <td>Sobrang Sarap</td>
+                    <td><span id="stock11"></span></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>Sisig</td>
+                    <td>135</td>
+                    <td>solid sarap</td>
+                    <td><span id="stock12"></span></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>Sizzling Hotdog</td>
+                    <td>200</td>
+                    <td>juts pero madami</td>
+                    <td><span id="stock13"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
+
+<!-- Put this script tag after your existing script imports -->
+<script>
+  // Define initial stock quantities
+  let stocks = {
+    stock1: 100,
+    stock2: 100,
+    // Add more stocks as needed
+  };
+
+  // Function to update the stock display
+  function updateStockDisplay() {
+    for (const stockId in stocks) {
+      if (Object.hasOwnProperty.call(stocks, stockId)) {
+        const stockElement = document.getElementById(stockId);
+        if (stockElement) {
+          stockElement.textContent = stocks[stockId];
+        }
+      }
+    }
+  }
+
+  // Function to handle purchase
+  function purchase(productId) {
+    const quantity = 1; // Assuming purchase quantity is always 1 for simplicity
+    const availableStock = stocks[productId];
+    if (availableStock >= quantity) {
+      // Proceed with the purchase
+      stocks[productId] -= quantity; // Decrease stock
+      updateStockDisplay(); // Update stock display
+      // Add the purchased item to the invoice, update total, etc.
+    } else {
+      // Not enough stock
+      alert("Sorry, this product is out of stock.");
+    }
+  }
+
+  // Call the function to update initial stock display
+  updateStockDisplay();
+</script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
   
