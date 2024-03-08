@@ -250,8 +250,9 @@
 
         const newHeight = 297; 
 
+      const widthSize = 288;
 
-        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight); 
+        doc.addImage(imageData, 'PNG', 0, 0, 210, newHeight, widthSize); 
 
 
         doc.save('receipt.pdf');
