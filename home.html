@@ -343,60 +343,6 @@ $('#print-receipt').on('click', printReceipt);
 
 
 
-  // Define initial stock quantities
-  let stocks = {
-    stock1: 100,
-    stock2: 100,
-    // Add more stocks as needed
-  };
-
-  // Function to update the stock display
-  function updateStockDisplay() {
-    for (const stockId in stocks) {
-      if (Object.hasOwnProperty.call(stocks, stockId)) {
-        const stockElement = document.getElementById(stockId);
-        if (stockElement) {
-          stockElement.textContent = stocks[stockId];
-        }
-      }
-    }
-  }
-
-  // Function to handle purchase
-  function purchase(productId) {
-    const quantity = 1; // Assuming purchase quantity is always 1 for simplicity
-    const availableStock = stocks[productId];
-    if (availableStock >= quantity) {
-      // Proceed with the purchase
-      stocks[productId] -= quantity; // Decrease stock
-      updateStockDisplay(); // Update stock display
-      // Add the purchased item to the invoice, update total, etc.
-    } else {
-      // Not enough stock
-      alert("Sorry, this product is out of stock.");
-    }
-  }
-
-  // Call the function to update initial stock display
-  updateStockDisplay();
-  
-
-
-
-
-      
-
-
-
-
-      
-
-
-
-
-
-
-      
 
 
       function getCurrentDateTime() {
