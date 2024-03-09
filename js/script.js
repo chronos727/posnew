@@ -349,6 +349,36 @@ $('#end-payment').on('click', remove_invoice)
 
 
 
+// Function to update the stock display in the table
+function updateStockTable() {
+  $('#stock-table-body').html(''); // Clear existing table rows
+
+  // Loop through each product in the data array
+  data.forEach(function(product) {
+    const type = product[0];
+    const name = product[1];
+    const price = product[2];
+    const description = product[3];
+    const stock = stocks[name.replace(/ /g, "_")]; // Get the stock quantity for the product
+
+    // Create a table row for the product
+    const tableRow = `
+      <tr>
+        <td>${type}</td>
+        <td>${name}</td>
+        <td>${price}</td>
+        <td>${description}</td>
+        <td>${stock}</td>
+      </tr>
+    `;
+
+    // Append the table row to the tbody element
+    $('#stock-table-body').append(tableRow);
+  });
+}
+
+// Call the function to update the initial stock table display
+updateStockTable();
 
 
 
