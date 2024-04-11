@@ -88,9 +88,7 @@
                 </div>
             </div>
             <div class="row mt-3" id="loop-card">
-
-                <!-- loop el -->
-
+                <!-- Placeholder for product display -->
             </div>
         </div>
     </div>
@@ -209,7 +207,15 @@
 
     function getCurrentDateTime() {
         const now = new Date();
-        const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+        };
         return now.toLocaleDateString('en-US', options);
     }
 
