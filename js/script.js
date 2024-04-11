@@ -23,36 +23,70 @@ let tax = 0
 let price = 0
 let input_postion = 0
 
-// first loop
+//loop
 let title = $('#name-cat').text()
-if(title == 'Food'){
-    food_cat()
+if(title == 'Bands'){
+    Bands_cat()
 }
 
-//category sorting
-$('#food').on('click', function(){
-    $('#name-cat').text('Food')
-    food_cat()
+//category
+$('#Bands').on('click', function(){
+    $('#name-cat').text('Bands')
+    Bands_cat()
 })
 
-$('#drink').on('click', function(){
-    drink_cat()
+$('#Genshin').on('click', function(){
+    $('#name-cat').text('Genshin')
+    Genshin_cat()
 })
+
+$('#Initial').on('click', function(){
+    $('#name-cat').text('Initial')
+    Initial_cat()
+})
+
+$('#JDM').on('click', function(){
+    $('#name-cat').text('JDM')
+    JDM_cat()
+})
+
+$('#JJBA').on('click', function(){
+    $('#name-cat').text('JJBA')
+    JJBA_cat()
+})
+
+
 
 // reverse
 $('#sort').on('click', function(){
     let cat_sort = $('#name-cat').text().toLowerCase()
-    if(cat_sort == 'drink'){
-        console.log('click drink')
+    if(cat_sort == 'Bands'){
+        console.log('click Bands')
         data.reverse()
-        drink_cat()
+        Bands_cat()
     }else{
-        console.log('click food')
+        console.log('click Genshin')
         data.reverse()
         $('#loop-card').html('')
-        food_cat()
+        Genshin_cat()
+    }else{
+        console.log('click Initial')
+        data.reverse()
+        $('#loop-card').html('')
+        Initial_cat()
+    }else{
+        console.log('click JDM')
+        data.reverse()
+        $('#loop-card').html('')
+        JDM_cat()
+    }else{
+        console.log('click JJBA')
+        data.reverse()
+        $('#loop-card').html('')
+        JJBA_cat()
     }
 })
+
 
 //search
 $('#search-btn').click(() => {
@@ -75,9 +109,9 @@ $('#search-input').on('keyup',function(){
     }
 })
 
-function food_cat(){
+function Bands_cat(){
     $('#loop-card').html('')
-    let key = $('#food').text().toLowerCase()
+    let key = $('#Bands').text().toLowerCase()
     $.each(data, function(i, val){
         if(val[0] == key){
             const el_card = `
@@ -96,7 +130,70 @@ function food_cat(){
     })
 }
 
-function drink_cat(){
+function Genshin_cat(){
+    $('#loop-card').html('')
+    let key = $('#drink').text().toLowerCase()
+    $('#name-cat').text('Drink')
+    $.each(data, function(i, val){
+        if(val[0] == key){
+            const el_card = `
+                <div class="col-md-3 mb-4 subCardParent" onclick="invoice_data('${val[4]}','${val[1]}',${val[2]})">
+                    <div class="card">
+                    <img src="assets/${val[4]}" class="card-img-top" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">${val[1]}</h5>
+                        <p class="card-text">PHP ${val[2]}</p>
+                    </div>
+                    </div>
+                </div>
+            `
+            $('#loop-card').append(el_card)
+        }
+    })
+}
+function JDM_cat(){
+    $('#loop-card').html('')
+    let key = $('#drink').text().toLowerCase()
+    $('#name-cat').text('Drink')
+    $.each(data, function(i, val){
+        if(val[0] == key){
+            const el_card = `
+                <div class="col-md-3 mb-4 subCardParent" onclick="invoice_data('${val[4]}','${val[1]}',${val[2]})">
+                    <div class="card">
+                    <img src="assets/${val[4]}" class="card-img-top" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">${val[1]}</h5>
+                        <p class="card-text">PHP ${val[2]}</p>
+                    </div>
+                    </div>
+                </div>
+            `
+            $('#loop-card').append(el_card)
+        }
+    })
+}
+function Initial_cat(){
+    $('#loop-card').html('')
+    let key = $('#drink').text().toLowerCase()
+    $('#name-cat').text('Drink')
+    $.each(data, function(i, val){
+        if(val[0] == key){
+            const el_card = `
+                <div class="col-md-3 mb-4 subCardParent" onclick="invoice_data('${val[4]}','${val[1]}',${val[2]})">
+                    <div class="card">
+                    <img src="assets/${val[4]}" class="card-img-top" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">${val[1]}</h5>
+                        <p class="card-text">PHP ${val[2]}</p>
+                    </div>
+                    </div>
+                </div>
+            `
+            $('#loop-card').append(el_card)
+        }
+    })
+}
+function JJBA_cat(){
     $('#loop-card').html('')
     let key = $('#drink').text().toLowerCase()
     $('#name-cat').text('Drink')
