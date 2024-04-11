@@ -1,19 +1,19 @@
 const newData = [
-    ['sticker', 'Bands Set 1', 200, '', 'Bands Set 1.jpg'],
-    ['sticker', 'Bands Set 2', 200, '', 'Bands Set 2.jpg'],
-    ['sticker', 'Bands Set 3', 200, '', 'Bands Set 3.jpg'],
-    ['sticker', 'Genshin Impact Set 1', 200, '', 'Genshin Impact Set 1.jpg'],
-    ['sticker', 'Genshin Impact Set 2', 200, '', 'Genshin Impact Set 2.jpg'],
-    ['sticker', 'Genshin Impact Set 3', 200, '', 'Genshin Impact Set 3.jpg'],
-    ['sticker', 'Initial D Set 1', 200, '', 'Initial D Set 1.jpg'],
-    ['sticker', 'Initial D Set 2', 200, '', 'Initial D Set 2.jpg'],
-    ['sticker', 'Initial D Set 3', 200, '', 'Initial D Set 3.jpg'],
-    ['sticker', 'JDM Set 1', 200, '', 'JDM Set 1.jpg'],
-    ['sticker', 'JDM Set 2', 200, '', 'JDM Set 2.jpg'],
-    ['sticker', 'JDM Set 3', 200, '', 'JDM Set 3.jpg'],
-    ['sticker', 'JJBA Set 1', 200, '', 'JJBA Set 1.jpg'],
-    ['sticker', 'JJBA Set 2', 200, '', 'JJBA Set 2.jpg'],
-    ['sticker', 'JJBA Set 3', 200, '', 'JJBA Set 3.jpg']
+    ['Bands', 'Bands Set 1', 200, '', 'Bands Set 1.jpg'],
+    ['Bands', 'Bands Set 2', 200, '', 'Bands Set 2.jpg'],
+    ['Bands', 'Bands Set 3', 200, '', 'Bands Set 3.jpg'],
+    ['Genshin', 'Genshin Impact Set 1', 200, '', 'Genshin Impact Set 1.jpg'],
+    ['Genshin', 'Genshin Impact Set 2', 200, '', 'Genshin Impact Set 2.jpg'],
+    ['Genshin', 'Genshin Impact Set 3', 200, '', 'Genshin Impact Set 3.jpg'],
+    ['Initial', 'Initial D Set 1', 200, '', 'Initial D Set 1.jpg'],
+    ['Initial', 'Initial D Set 2', 200, '', 'Initial D Set 2.jpg'],
+    ['Initial', 'Initial D Set 3', 200, '', 'Initial D Set 3.jpg'],
+    ['JDM', 'JDM Set 1', 200, '', 'JDM Set 1.jpg'],
+    ['JDM', 'JDM Set 2', 200, '', 'JDM Set 2.jpg'],
+    ['JDM', 'JDM Set 3', 200, '', 'JDM Set 3.jpg'],
+    ['JJBA', 'JJBA Set 1', 200, '', 'JJBA Set 1.jpg'],
+    ['JJBA', 'JJBA Set 2', 200, '', 'JJBA Set 2.jpg'],
+    ['JJBA', 'JJBA Set 3', 200, '', 'JJBA Set 3.jpg']
 ];
 
 
