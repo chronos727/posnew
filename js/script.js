@@ -1,95 +1,19 @@
-const data = [
-    [
-        'drink',
-        "1 Bucket of Redhorse",
-        500,
-        "Lakas Tama Pero Di Wasak",
-        "1-Bucket-Redhorse.png"
-    ],
-    [
-        'drink',
-        "Black Label",
-        2000,
-        "Wasak na Wasak",
-        "blacklabel.png"
-    ],
-    [
-        'drink',
-        "Blowjob Tower",
-        1500,
-        "Walang Kasing Sarap",
-        "Blowjob-Tower.png"
-    ],
-    [
-        'drink',
-        "Emperador",
-        1200,
-        "Nalasing",
-        "emperador.png"
-    ],
-    [
-        'drink',
-        "Jack Daniels",
-        1500,
-        "takas na",
-        "Jack-Daniels.png"
-    ],
-    [
-        'drink',
-        "Juice",
-        100,
-        "weak",
-        "juice.jpg"
-    ],
-    [
-        'drink',
-        "Tequila",
-        1500,
-        "Lovable Taste",
-        "Tequila.png"
-    ],
-    [
-        'drink',
-        "Water",
-        50,
-        "mabait",
-        "water.jpg"
-    ],
-    [
-        'food', 
-        "Chicharon", 
-        100,
-        "tanpulu",
-        "chicha.jpg"
-    ],
-    [
-        'food', 
-        "Chicharon Bulaklak", 
-        100,
-        "Crispy Pork",
-        "chicharon.jpg"
-    ],
-    [
-        'food',
-        "Lechon Kawali with Cheese",
-        200,
-        "Sobrang Sarap",
-        "crispypata.png"
-    ],
-    [
-        'food',
-        "Sisig",
-        135,
-        "solid sarap",
-        "sisig.jpg"
-    ],
-    [
-        'food',
-        "Sizzling Hotdog",
-        200,
-        "juts pero madami",
-        "hotdog.jpg"
-    ]
+const newData = [
+    ['sticker', 'Bands Set 1', 200, '', 'Bands Set 1.jpg'],
+    ['sticker', 'Bands Set 2', 200, '', 'Bands Set 2.jpg'],
+    ['sticker', 'Bands Set 3', 200, '', 'Bands Set 3.jpg'],
+    ['sticker', 'Genshin Impact Set 1', 200, '', 'Genshin Impact Set 1.jpg'],
+    ['sticker', 'Genshin Impact Set 2', 200, '', 'Genshin Impact Set 2.jpg'],
+    ['sticker', 'Genshin Impact Set 3', 200, '', 'Genshin Impact Set 3.jpg'],
+    ['sticker', 'Initial D Set 1', 200, '', 'Initial D Set 1.jpg'],
+    ['sticker', 'Initial D Set 2', 200, '', 'Initial D Set 2.jpg'],
+    ['sticker', 'Initial D Set 3', 200, '', 'Initial D Set 3.jpg'],
+    ['sticker', 'JDM Set 1', 200, '', 'JDM Set 1.jpg'],
+    ['sticker', 'JDM Set 2', 200, '', 'JDM Set 2.jpg'],
+    ['sticker', 'JDM Set 3', 200, '', 'JDM Set 3.jpg'],
+    ['sticker', 'JJBA Set 1', 200, '', 'JJBA Set 1.jpg'],
+    ['sticker', 'JJBA Set 2', 200, '', 'JJBA Set 2.jpg'],
+    ['sticker', 'JJBA Set 3', 200, '', 'JJBA Set 3.jpg']
 ];
 
 
@@ -103,13 +27,13 @@ let input_postion = 0
 
 // first loop
 let title = $('#name-cat').text()
-if(title == 'Food'){
+if(title == 'sticker'){
     food_cat()
 }
 
 //category sorting
-$('#food').on('click', function(){
-    $('#name-cat').text('Food')
+$('#sticker').on('click', function(){
+    $('#name-cat').text('sticker')
     food_cat()
 })
 
@@ -120,12 +44,12 @@ $('#drink').on('click', function(){
 // reverse
 $('#sort').on('click', function(){
     let cat_sort = $('#name-cat').text().toLowerCase()
-    if(cat_sort == 'drink'){
-        console.log('click drink')
+    if(cat_sort == 'sticker'){
+        console.log('click sticker')
         data.reverse()
         drink_cat()
     }else{
-        console.log('click food')
+        console.log('click sticker')
         data.reverse()
         $('#loop-card').html('')
         food_cat()
@@ -155,7 +79,7 @@ $('#search-input').on('keyup',function(){
 
 function food_cat(){
     $('#loop-card').html('')
-    let key = $('#food').text().toLowerCase()
+    let key = $('#sticker').text().toLowerCase()
     $.each(data, function(i, val){
         if(val[0] == key){
             const el_card = `
@@ -176,8 +100,8 @@ function food_cat(){
 
 function drink_cat(){
     $('#loop-card').html('')
-    let key = $('#drink').text().toLowerCase()
-    $('#name-cat').text('Drink')
+    let key = $('#sticker').text().toLowerCase()
+    $('#name-cat').text('sticker')
     $.each(data, function(i, val){
         if(val[0] == key){
             const el_card = `
