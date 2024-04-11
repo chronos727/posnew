@@ -63,6 +63,7 @@ $('#sort').on('click', function(){
     if(cat_sort == 'Bands'){
         console.log('click Bands')
         data.reverse()
+        $('#loop-card').html('')
         Bands_cat()
     }else{
         console.log('click Genshin')
