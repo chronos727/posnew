@@ -15,8 +15,6 @@ const newData = [
     ['JJBA', 'JJBA Set 2', 200, '', 'JJBA Set 2.jpg'],
     ['JJBA', 'JJBA Set 3', 200, '', 'JJBA Set 3.jpg']
 ];
-
-
 // global variable
 let invoice_item = []
 let sub_total = 0
@@ -27,13 +25,13 @@ let input_postion = 0
 
 // first loop
 let title = $('#name-cat').text()
-if(title == 'sticker'){
+if(title == 'Food'){
     food_cat()
 }
 
 //category sorting
-$('#sticker').on('click', function(){
-    $('#name-cat').text('sticker')
+$('#food').on('click', function(){
+    $('#name-cat').text('Food')
     food_cat()
 })
 
@@ -44,12 +42,12 @@ $('#drink').on('click', function(){
 // reverse
 $('#sort').on('click', function(){
     let cat_sort = $('#name-cat').text().toLowerCase()
-    if(cat_sort == 'sticker'){
-        console.log('click sticker')
+    if(cat_sort == 'drink'){
+        console.log('click drink')
         data.reverse()
         drink_cat()
     }else{
-        console.log('click sticker')
+        console.log('click food')
         data.reverse()
         $('#loop-card').html('')
         food_cat()
@@ -79,7 +77,7 @@ $('#search-input').on('keyup',function(){
 
 function food_cat(){
     $('#loop-card').html('')
-    let key = $('#sticker').text().toLowerCase()
+    let key = $('#food').text().toLowerCase()
     $.each(data, function(i, val){
         if(val[0] == key){
             const el_card = `
@@ -100,8 +98,8 @@ function food_cat(){
 
 function drink_cat(){
     $('#loop-card').html('')
-    let key = $('#sticker').text().toLowerCase()
-    $('#name-cat').text('sticker')
+    let key = $('#drink').text().toLowerCase()
+    $('#name-cat').text('Drink')
     $.each(data, function(i, val){
         if(val[0] == key){
             const el_card = `
@@ -269,19 +267,5 @@ function reset_amount(){
 }
 
 $('#end-payment').on('click', remove_invoice)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
