@@ -1,17 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, rgba(255,255,255,0.9), rgb(101, 116, 212));
+    background: linear-gradient(to top, rgba(255,255,255,0.9), #9e0f0d);
     overflow: hidden;
     height: 100vh; /* Ensure the background covers the entire viewport */
 }
 
-
-
-
-
 .bg-nav{
-    background: blue;
+    background: #0a7f99;
 }
 
 .contain{
@@ -62,7 +58,7 @@ body {
 }
 
 #buy-type{
-    color: black;
+    color: #f1c40f;
     border-radius: 0;
     height: 50px;
     text-align: center;
@@ -82,11 +78,11 @@ body {
 /* Add custom styles for dropdown */
 .dropdown-menu {
     border-radius: 0;
-    background-color: blue; /* Change dropdown background color */
+    background-color: #16a085; /* Change dropdown background color */
 }
 
 .dropdown-item {
-    color: white; /* Change dropdown item text color */
+    color: #ecf0f1; /* Change dropdown item text color */
 }
 
 /* Responsive design adjustments */
@@ -101,7 +97,7 @@ body {
 
 /* Color scheme adjustments */
 .bg-nav {
-    background: blue; /* Adjust navbar background color */
+    background: #0a7f99; /* Adjust navbar background color */
 }
 
 /* Typography adjustments */
