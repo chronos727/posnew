@@ -1,19 +1,19 @@
 const newData = [
-    ['Bands', 'Bands Set 1', 200, '', 'Bands Set 1.jpg'],
-    ['Bands', 'Bands Set 2', 200, '', 'Bands Set 2.jpg'],
-    ['Bands', 'Bands Set 3', 200, '', 'Bands Set 3.jpg'],
-    ['Genshin', 'Genshin Impact Set 1', 200, '', 'Genshin Impact Set 1.jpg'],
-    ['Genshin', 'Genshin Impact Set 2', 200, '', 'Genshin Impact Set 2.jpg'],
-    ['Genshin', 'Genshin Impact Set 3', 200, '', 'Genshin Impact Set 3.jpg'],
-    ['Initial', 'Initial D Set 1', 200, '', 'Initial D Set 1.jpg'],
-    ['Initial', 'Initial D Set 2', 200, '', 'Initial D Set 2.jpg'],
-    ['Initial', 'Initial D Set 3', 200, '', 'Initial D Set 3.jpg'],
-    ['JDM', 'JDM Set 1', 200, '', 'JDM Set 1.jpg'],
-    ['JDM', 'JDM Set 2', 200, '', 'JDM Set 2.jpg'],
-    ['JDM', 'JDM Set 3', 200, '', 'JDM Set 3.jpg'],
-    ['JJBA', 'JJBA Set 1', 200, '', 'JJBA Set 1.jpg'],
-    ['JJBA', 'JJBA Set 2', 200, '', 'JJBA Set 2.jpg'],
-    ['JJBA', 'JJBA Set 3', 200, '', 'JJBA Set 3.jpg']
+    ['Bands', 'Bands Set 1', 200, 'a', 'Bands Set 1.jpg'],
+    ['Bands', 'Bands Set 2', 200, 'a', 'Bands Set 2.jpg'],
+    ['Bands', 'Bands Set 3', 200, 'a', 'Bands Set 3.jpg'],
+    ['Genshin', 'Genshin Impact Set 1', 200, 'a', 'Genshin Impact Set 1.jpg'],
+    ['Genshin', 'Genshin Impact Set 2', 200, 'a', 'Genshin Impact Set 2.jpg'],
+    ['Genshin', 'Genshin Impact Set 3', 200, 'a', 'Genshin Impact Set 3.jpg'],
+    ['Initial', 'Initial D Set 1', 200, 'a', 'Initial D Set 1.jpg'],
+    ['Initial', 'Initial D Set 2', 200, 'a', 'Initial D Set 2.jpg'],
+    ['Initial', 'Initial D Set 3', 200, 'a', 'Initial D Set 3.jpg'],
+    ['JDM', 'JDM Set 1', 200, 'a', 'JDM Set 1.jpg'],
+    ['JDM', 'JDM Set 2', 200, 'a', 'JDM Set 2.jpg'],
+    ['JDM', 'JDM Set 3', 200, 'a', 'JDM Set 3.jpg'],
+    ['JJBA', 'JJBA Set 1', 200, 'a', 'JJBA Set 1.jpg'],
+    ['JJBA', 'JJBA Set 2', 200, 'a', 'JJBA Set 2.jpg'],
+    ['JJBA', 'JJBA Set 3', 200, 'a', 'JJBA Set 3.jpg']
 ];
 // global variable
 let invoice_item = []
